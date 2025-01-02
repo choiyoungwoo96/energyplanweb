@@ -1,0 +1,27 @@
+/* 메인메뉴박스 */
+.container {
+  width: 100%;
+}
+.container__menubar {
+  width: 1200px;
+  margin: 0 auto;
+  height: 75px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 메인메뉴리스트 */
+.container__menubar__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+/* 견적문의 버튼 */
+.container__menubar__list__items__side {
+  padding: 10px;
+  background-color: #2d6a4f;
+  color: #ffffff;
+  border-radius: 5px;
+}
