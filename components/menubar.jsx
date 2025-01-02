@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "./menubar.css";
 
 function Menubar() {
   const menubarList = [
@@ -10,25 +9,28 @@ function Menubar() {
     { name: "고객센터", path: "/" },
   ];
   return (
-    <div>
-      <nav className="container__menubar">
-        <div className="container_menubar__logoBox">
-          <div>
-            <Link href="/">에너지플랜</Link>
-          </div>
+    <>
+      <nav className="w-[1200px] h-[70px] m-auto bg-transparent flex flex-row items-center justify-between">
+        <div>
+          <Link href="/">에너지플랜</Link>
         </div>
-        <ul className="container__menubar__list">
+        <ul
+          className="flex flex-row items-center justify-center
+        "
+        >
           {menubarList.map((menulist, index) => (
-            <li key={index} className="container__menubar__list__items">
-              <Link href={menulist.path}>{menulist.name}</Link>
+            <li key={index} className="">
+              <Link className="p-[15px]" href={menulist.path}>
+                {menulist.name}
+              </Link>
             </li>
           ))}
         </ul>
-        <div className="container__menubar__list__items__side">
+        <div className="py-[10px] px-[15px] bg-[#2d6a4f] text-white rounded-[10px]">
           <Link href="/estimate">견적문의</Link>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
 export default Menubar;
