@@ -1,3 +1,8 @@
+"use client";
+import { Scrollbar } from "swiper/modules";
+import dynamic from "next/dynamic";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 function Construction() {
   return (
     <>
@@ -6,11 +11,39 @@ function Construction() {
           <div>시공사례</div>
           <div>Construction case</div>
         </div>
-        <div className="grid grid-cols-3">
-          <div>박스1</div>
-          <div>박스1</div>
-          <div>박스1</div>
-        </div>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          autoplay
+          loop={true}
+        >
+          <SwiperSlide>
+            <div
+              className="h-[300px]  bg-cover rounded-lg"
+              style={{ backgroundImage: "url(/ipp.jpeg)" }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="h-[300px]  bg-cover rounded-lg"
+              style={{ backgroundImage: "url(/factory.jpeg)" }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="h-[300px]  bg-cover rounded-lg"
+              style={{ backgroundImage: "url(/re.jpg)" }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="h-[300px]  bg-cover rounded-lg"
+              style={{ backgroundImage: "url(/ipp.jpeg)" }}
+            ></div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </>
   );
