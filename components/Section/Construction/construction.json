@@ -1,0 +1,27 @@
+[
+  {
+    "address": "인천광역시",
+    "date": "2024월 11월 23일",
+    "backgroundUri": "/construction01.jpg"
+  },
+  {
+    "address": "부산광역시",
+    "date": "2024월 12월 04일",
+    "backgroundUri": "/construction02.jpg"
+  },
+  {
+    "address": "대구광역시",
+    "date": "2024월 11월 23일",
+    "backgroundUri": "/construction03.jpg"
+  },
+  {
+    "address": "충청남도 충주시",
+    "date": "2024월 10월 23일",
+    "backgroundUri": "/construction04.jpg"
+  },
+  {
+    "address": "경상남도 포항시",
+    "date": "2024월 09월 10일",
+    "backgroundUri": "/construction05.jpg"
+  }
+]

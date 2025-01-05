@@ -26,7 +26,7 @@ function Menubar() {
             </li>
           ))}
         </ul>
-        <div className="py-[10px] px-[15px] bg-[#2d6a4f] text-white rounded-[10px]">
+        <div className="py-[10px] px-[15px] bg-green-900 text-white rounded-[10px]">
           <Link href="/estimate">견적문의</Link>
         </div>
       </nav>

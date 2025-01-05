@@ -1,15 +1,18 @@
-"use client";
 import Link from "next/link";
-import Menubar from "../../components/menubar";
-import Mainslide from "../../components/mainslide";
-import Business from "../../components/business";
-import Construction from "../../components/construction";
+import Menubar from "../../components/Header/menubar";
+import MainVideo from "../../components/Section/MainVideo/mainvideo";
+import Business from "../../components/Section/Business/business";
+import Construction from "../../components/Section/Construction/construction";
+import Information from "../../components/Section/Information/information";
+import Profit from "../../components/Section/Profit/profit";
 
 function Page() {
   return (
     <div>
       <Menubar></Menubar>
-      <Mainslide></Mainslide>
+      <MainVideo></MainVideo>
+      <Information></Information>
+      <Profit></Profit>
       <Business></Business>
       <Construction></Construction>
     </div>
