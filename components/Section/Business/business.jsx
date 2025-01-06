@@ -7,28 +7,28 @@ function Business() {
       description: "전력 판매를 통한 고수익을 창출해보세요",
       button: "바로가기",
       path: "/business",
-      bg: "/ipp.jpeg",
+      bg: "/business01.jpeg",
     },
     {
       title: "임대사업",
       description: "기초 비용없이 임대료 수익을 창출해보세요",
       button: "바로가기",
       path: "/business",
-      bg: "/rent.jpg",
+      bg: "/business02.jpg",
     },
     {
       title: "RE100",
       description: "자가소비를 통한 탄소중립 달성해보세요",
       button: "바로가기",
       path: "/business",
-      bg: "/re.jpg",
+      bg: "/business03.jpg",
     },
     {
       title: "전기료감축",
       description: "매년 올라가는 전기료에 대비하세요",
       button: "바로가기",
       path: "/business",
-      bg: "/factory.jpeg",
+      bg: "/business04.jpeg",
     },
   ];
   return (

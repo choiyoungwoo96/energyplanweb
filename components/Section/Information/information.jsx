@@ -8,7 +8,7 @@ function Information() {
             <div className="text-xl text-gray-500">SMP/REC infomation</div>
           </div>
           <div className="flex gap-2">
-            <select className="border border-green-950">
+            <select className="border border-green-950 px-4">
               <option>가중치0.7</option>
               <option>가중치1.0</option>
               <option>가중치1.2</option>

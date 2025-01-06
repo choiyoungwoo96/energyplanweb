@@ -1,7 +1,7 @@
 function Profit() {
   return (
-    <div class="w-screen h-full bg-gray-300 mt-[100px]">
-      <div class="w-full max-w-[1200px] m-auto">
+    <div className="w-screen h-full bg-gray-300 mt-[100px]">
+      <div className="w-full max-w-[1200px] m-auto">
         <div className="flex flex-col gap-1">
           <div className="text-4xl font-bold">수익률 계산기</div>
           <div className="text-xl text-gray-500">

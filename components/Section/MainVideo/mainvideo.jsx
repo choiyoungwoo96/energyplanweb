@@ -6,7 +6,7 @@ function MainVideo() {
   return (
     <div className="w-full relative">
       <video width="100%" height="100%" autoPlay muted>
-        <source src="/mainslide1.mp4" type="video/mp4"></source>
+        <source src="/mainvideo.mp4" type="video/mp4"></source>
       </video>
       <div className="w-full h-full bg-black opacity-50 absolute top-0 height-0"></div>
       <div className="w-full  h-full absolute top-0 left-0 flex items-center justify-center">
