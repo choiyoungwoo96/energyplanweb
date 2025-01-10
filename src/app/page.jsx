@@ -6,6 +6,7 @@ import Construction from "../../components/Section/Construction/construction";
 import Information from "../../components/Section/Information/information";
 import Profit from "../../components/Section/Profit/profit";
 import Footer from "../../components/Footer/footer";
+import Partner from "../../components/Section/Partner/partner";
 
 function Page() {
   return (
@@ -16,6 +17,7 @@ function Page() {
       <Profit></Profit>
       <Business></Business>
       <Construction></Construction>
+      <Partner></Partner>
       <Footer></Footer>
     </div>
   );

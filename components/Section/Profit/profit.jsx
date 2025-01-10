@@ -1,6 +1,6 @@
 function Profit() {
   return (
-    <div className="w-screen h-full bg-gray-300 mt-[100px]">
+    <div className="w-screen h-full bg-gray-200 mt-[100px] py-12">
       <div className="w-full max-w-[1200px] m-auto">
         <div className="flex flex-col gap-1">
           <div className="text-4xl font-bold">수익률 계산기</div>
@@ -8,30 +8,38 @@ function Profit() {
             Return on Inverstment (ROI) Calcaulator
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4">
-          <div>
+        <div className="grid grid-cols-3 gap-x-[65px] gap-y-[25px] mt-4">
+          <div className="flex flex-col gap-3">
             <div className="text-2xl">태양광 설치용량</div>
-            <input></input>
+            <input className="w-full border border-green-900 px-4 py-6 rounded-lg text-2xl"></input>
           </div>
-          <div>
-            <div>연간발전량</div>
-            <div>200MW</div>
+          <div className="flex flex-col gap-3">
+            <div className="text-2xl ">연간발전량</div>
+            <div className="w-full bg-green-900 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
+              200MW
+            </div>
           </div>
-          <div>
-            <div>월수익</div>
-            <div>200MW</div>
+          <div className="flex flex-col gap-3">
+            <div className="text-2xl ">월수익</div>
+            <div className="w-full bg-green-900 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
+              10,000,000원
+            </div>
           </div>
-          <div>
-            <div>REC가중치</div>
-            <input></input>
+          <div className="flex flex-col gap-3">
+            <div className="text-2xl">REC가중치</div>
+            <input className="w-full border border-green-900 px-4 py-6 rounded-lg text-2xl"></input>
           </div>
-          <div>
-            <div>연수익</div>
-            <div>100,000,000원</div>
+          <div className="flex flex-col gap-3">
+            <div className="text-2xl ">연수익</div>
+            <div className="w-full bg-green-900 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
+              100,000,000원
+            </div>
           </div>
-          <div>
-            <div>20년수익</div>
-            <div>1,000,000,000원</div>
+          <div className="flex flex-col gap-3">
+            <div className="text-2xl ">연간발전량</div>
+            <div className="w-full bg-green-900 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
+              1,000,000,000원
+            </div>
           </div>
         </div>
       </div>

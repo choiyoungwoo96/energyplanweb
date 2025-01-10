@@ -43,7 +43,7 @@ function ConstructionSwiper() {
         {Slideitem.map((slideitem, index) => (
           <SwiperSlide key={index}>
             <div
-              className="w-full h-[350px] bg-cover rounded-lg"
+              className="w-full h-[350px] bg-cover rounded-2xl"
               style={{ backgroundImage: `url(${slideitem.backgroundUri})` }}
             ></div>
             <div className="flex flex-col">
