@@ -1,7 +1,7 @@
 function Information() {
   return (
-    <div className="w-full max-w-[1200px] m-auto mt-[50px]">
-      <div className="flex flex-col gap-4">
+    <div className="w-full max-w-[1200px] m-auto">
+      <div className="flex flex-col gap-4 py-[50px]">
         <div className="flex items-center justify-start gap-5">
           <div>
             <div className="text-4xl">SMP/REC 정보</div>
@@ -24,7 +24,7 @@ function Information() {
         <div className="grid grid-cols-3 gap-20">
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-start gap-3 ">
-              <div className="px-10 py-4 text-2xl  bg-green-900 text-white rounded-lg flex items-center justify-center">
+              <div className="px-10 py-2 text-2xl  bg-green-500 text-white rounded-lg flex items-center justify-center">
                 SMP
               </div>
               <div className="text-xl text-green-900">2024.12.30(월)</div>
@@ -35,7 +35,7 @@ function Information() {
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-start gap-3 ">
-              <div className="px-10 py-4 text-2xl  bg-green-900 text-white rounded-lg flex items-center justify-center">
+              <div className="px-10 py-2 text-2xl  bg-green-500 text-white rounded-lg flex items-center justify-center">
                 REC
               </div>
               <div className="text-xl text-green-900">2024.12.30(월)</div>
@@ -46,7 +46,7 @@ function Information() {
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-start gap-3 ">
-              <div className="px-4 py-4 text-2xl  bg-green-900 text-white rounded-lg flex items-center justify-center">
+              <div className="px-4 py-2 text-2xl  bg-green-500 text-white rounded-lg flex items-center justify-center">
                 SMP+REC
               </div>
               <div className="text-xl text-green-900">가중치 1.5 적용</div>
