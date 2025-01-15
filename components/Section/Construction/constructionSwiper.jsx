@@ -46,7 +46,7 @@ function ConstructionSwiper() {
               className="w-full h-[350px] bg-cover rounded-2xl"
               style={{ backgroundImage: `url(${slideitem.backgroundUri})` }}
             ></div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center justify-center bg-green-500  rounded-lg text-white text-sm py-3 mt-3">
               <div className="text-2xl font-semibold py-[5px]">
                 {slideitem.address}
               </div>

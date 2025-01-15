@@ -21,11 +21,11 @@ function Partner() {
   //     },
   //   ];
   return (
-    <div className="w-screen m-auto bg-gray-100 my-[100px] py-[100px]">
+    <div className="w-screen m-auto bg-gray-100 py-[100px]">
       <div className="w-full max-w-[1200px] m-auto">
         <div className="text-3xl">Partner Company</div>
       </div>
-      <div className="flex items-start justify-start gap-4 w-screen mt-[25px]">
+      <div className="flex items-start justify-start gap-4 w-screen ">
         <Swiper
           modules={[Autoplay, Pagination]}
           loop={true}
