@@ -20,15 +20,15 @@ function Menubar() {
           </Link>
         </div>
         <ul
-          className="flex flex-row items-center justify-center gap-6 gap-20
+          className="flex flex-row items-center justify-center gap-6
         "
         >
           {menubarList.map((menulist, index) => (
-            <li key={index} className="">
-              <Link className="p-[15px] text-2xl" href={menulist.path}>
+            <li key={index} className="group relative">
+              <Link className="p-4 text-lg font-medium" href={menulist.path}>
                 {menulist.name}
               </Link>
-              <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+              <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-[100%] group-hover:left-0"></span>
             </li>
           ))}
         </ul>
