@@ -15,12 +15,12 @@ function Menubar() {
           <Link href="/">에너지플랜</Link>
         </div>
         <ul
-          className="flex flex-row items-center justify-center
+          className="flex flex-row items-center justify-center gap-6
         "
         >
           {menubarList.map((menulist, index) => (
             <li key={index} className="">
-              <Link className="p-[15px]" href={menulist.path}>
+              <Link className="p-[15px] text-2xl" href={menulist.path}>
                 {menulist.name}
               </Link>
             </li>
