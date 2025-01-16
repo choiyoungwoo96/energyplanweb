@@ -9,34 +9,34 @@ function Menubar() {
     { name: "고객센터", path: "/" },
   ];
   return (
-    <>
-      <nav className="w-[1200px] h-[70px] m-auto bg-transparent flex flex-row items-center justify-between">
+    <div className="fixed top-0 w-full h-full z-30">
+      <nav className="w-[1200px] h-[70px] m-auto flex flex-row items-center justify-between">
         <div>
           <Link href="/" className="flex items-center justify-center">
             <img src="/logo.png" className="w-[50px] h-[50px]"></img>
-            <p className="text-lg text-green-500 font-black">
+            <p className="text-lg text-white font-semibold">
               에너지플랜 Energyplan
             </p>
           </Link>
         </div>
         <ul
-          className="flex flex-row items-center justify-center gap-6
+          className="flex flex-row items-center justify-center gap-12
         "
         >
           {menubarList.map((menulist, index) => (
-            <li key={index} className="group relative">
-              <Link className="p-4 text-lg font-medium" href={menulist.path}>
+            <li key={index} className="group relative text-white">
+              <Link className="text-lg font-medium " href={menulist.path}>
                 {menulist.name}
               </Link>
-              <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-[100%] group-hover:left-0"></span>
+              <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-white transition-all duration-300 group-hover:w-[100%] group-hover:left-0"></span>
             </li>
           ))}
         </ul>
-        <div className="cursor-pointer py-[10px] px-[15px] bg-green-500 text-white rounded-[10px] hover:bg-transparent border border-green-500 hover:text-green-900">
+        <div className="cursor-pointer py-[10px] px-[15px] bg-green-900 text-white rounded-[10px] hover:bg-white hover:border-green-900 hover:text-green-900">
           <Link href="/estimate">견적문의</Link>
         </div>
       </nav>
-    </>
+    </div>
   );
 }
 export default Menubar;
