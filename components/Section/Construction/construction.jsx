@@ -10,10 +10,10 @@ function Construction() {
             <div className="text-2xl text-gray-500">Construction case</div>
           </div>
           <div className="flex gap-2">
-            <button className="w-[75px] h-[45px] bg-green-500 text-white rounded-lg swiper-button-prev">
+            <button className="w-[75px] h-[45px] bg-green-900 text-white rounded-lg swiper-button-prev">
               이전
             </button>
-            <button className="w-[75px] h-[45px] bg-green-500 text-white rounded-lg swiper-button-next">
+            <button className="w-[75px] h-[45px] bg-green-900 text-white rounded-lg swiper-button-next">
               다음
             </button>
           </div>

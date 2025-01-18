@@ -15,13 +15,13 @@ function Profit() {
           </div>
           <div className="flex flex-col gap-3">
             <div className="text-2xl ">연간발전량</div>
-            <div className="w-full bg-green-500 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
+            <div className="w-full bg-green-900 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
               200MW
             </div>
           </div>
           <div className="flex flex-col gap-3">
             <div className="text-2xl ">월수익</div>
-            <div className="w-full bg-green-500 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
+            <div className="w-full bg-green-900 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
               10,000,000원
             </div>
           </div>
@@ -31,13 +31,13 @@ function Profit() {
           </div>
           <div className="flex flex-col gap-3">
             <div className="text-2xl ">연수익</div>
-            <div className="w-full bg-green-500 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
+            <div className="w-full bg-green-900 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
               100,000,000원
             </div>
           </div>
           <div className="flex flex-col gap-3">
             <div className="text-2xl ">연간발전량</div>
-            <div className="w-full bg-green-500 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
+            <div className="w-full bg-green-900 rounded-lg px-4 py-6 flex items-center justify-center text-3xl text-white">
               1,000,000,000원
             </div>
           </div>
