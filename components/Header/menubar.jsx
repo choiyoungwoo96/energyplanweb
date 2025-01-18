@@ -1,4 +1,7 @@
+"use client";
+import { isCancel } from "axios";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 function Menubar() {
   const menubarList = [
@@ -8,13 +11,37 @@ function Menubar() {
     { name: "제품소개", path: "/" },
     { name: "고객센터", path: "/" },
   ];
+  const [isScroll, setIsscroll] = useState(true);
+  const [updatecroll, setUpdateScroll] = useState(0);
+  useEffect(() => {
+    const scrolllHandler = () => {
+      if (window.scrollY === 0) {
+        setIsscroll(true);
+      } else setIsscroll(false);
+      setUpdateScroll(window.scrollY);
+    };
+    window.addEventListener("scroll", scrolllHandler);
+  }, [updatecroll]);
+
   return (
-    <div className="fixed top-0 w-full z-30">
+    <div
+      className={
+        isScroll
+          ? "fixed top-0 w-full z-30 transition-colors duration-700 bg-transparent"
+          : "fixed top-0 w-full z-30 transition-colors duration-700 bg-white shadow-2xl "
+      }
+    >
       <nav className="w-[1200px] h-[70px] m-auto flex flex-row items-center justify-between">
         <div>
           <Link href="/" className="flex items-center justify-center">
             <img src="/logo.png" className="w-[50px] h-[50px]"></img>
-            <p className="text-lg text-white font-semibold">
+            <p
+              className={
+                isScroll
+                  ? "text-lg text-white font-semibold"
+                  : "text-lg text-black transition-colors duration-700"
+              }
+            >
               에너지플랜 Energyplan
             </p>
           </Link>
@@ -24,7 +51,14 @@ function Menubar() {
         "
         >
           {menubarList.map((menulist, index) => (
-            <li key={index} className="group relative text-white">
+            <li
+              key={index}
+              className={
+                isScroll
+                  ? "group relative text-white"
+                  : "group relative text-black transition-colors duration-700"
+              }
+            >
               <Link className="text-lg font-medium " href={menulist.path}>
                 {menulist.name}
               </Link>
@@ -32,7 +66,13 @@ function Menubar() {
             </li>
           ))}
         </ul>
-        <div className="cursor-pointer py-[10px] px-[15px] bg-green-900 text-white rounded-[10px] hover:bg-white hover:border-green-900 hover:text-green-900">
+        <div
+          className={
+            isScroll
+              ? "cursor-pointer py-[10px] px-[15px] bg-green-900 text-white rounded-[10px] hover:bg-white  hover:text-green-900"
+              : "cursor-pointer py-[10px] px-[15px] bg-green-900  text-white rounded-[10px] hover:border border-green-900 hover:text-green-900 hover:bg-white"
+          }
+        >
           <Link href="/estimate">견적문의</Link>
         </div>
       </nav>
