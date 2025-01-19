@@ -62,11 +62,23 @@ function Menubar() {
               <Link className="text-lg font-medium" href={menulist.path}>
                 {menulist.name}
               </Link>
-              <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-green-900 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+              <span
+                className={
+                  isScroll
+                    ? "absolute -bottom-1 left-1/2 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"
+                    : "absolute -bottom-1 left-1/2 w-0 h-1 bg-green-900 transition-all duration-300 group-hover:w-full group-hover:left-0"
+                }
+              ></span>
             </li>
           ))}
         </ul>
-        <div className="cursor-pointer py-[10px] px-[15px] bg-green-900 text-white rounded-[10px] hover:bg-transparent border border-green-900 hover:text-green-900">
+        <div
+          className={
+            isScroll
+              ? "cursor-pointer py-[10px] px-[15px] bg-green-900 text-white rounded-[10px] hover:bg-white border border-green-900 hover:text-green-900"
+              : "cursor-pointer py-[10px] px-[15px] bg-green-900 text-white rounded-[10px] hover:bg-transparent border border-green-900 hover:text-green-900"
+          }
+        >
           <Link href="/estimate">견적문의</Link>
         </div>
       </nav>

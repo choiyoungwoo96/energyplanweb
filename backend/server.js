@@ -1,11 +1,15 @@
 const mariadb = require("mariadb");
 const express = require("express");
 const cors = require("cors");
+const next = require("next");
+const server = express();
+const app = next({ dev: true });
 const port = 3001;
-const app = express();
-app.use(express.json());
-app.use(cors());
 
+server.use(express.json());
+server.use(cors());
+
+//mariaDB pool 생성
 const pool = mariadb.createPool({
   host: "localhost",
   user: "root",
@@ -14,11 +18,12 @@ const pool = mariadb.createPool({
   connectionLimit: 5,
 });
 
-app.get("/data", (req, res) => {
-  res.json({ message: "hello from node.js Backend" });
+// 다른 모든 요청은 Next.js 기본 핸들러로 처리
+server.all("*", (req, res) => {
+  return handle(req, res);
 });
 
-app.get("/create", async (req, res) => {
+server.get("/create", async (req, res) => {
   async function connectAccess() {
     let connection;
     try {
@@ -33,4 +38,4 @@ app.get("/create", async (req, res) => {
   await connectAccess();
 });
 
-app.listen(port, () => {});
+server.listen(port, () => {});
