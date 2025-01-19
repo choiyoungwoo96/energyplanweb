@@ -26,17 +26,22 @@ function Menubar() {
           {menubarList.map((menulist, index) => (
             <li key={index} className="relative group">
               <Link
-                className="w-full py-[15px] text-xl hover:text-green-500 transition-all duration-300 font-normal"
+                className="w-full py-[15px] text-md font-medium hover:text-green-500 transition-all duration-300"
                 href={menulist.path}
               >
                 {menulist.name}
               </Link>
-              <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+              <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </li>
           ))}
         </ul>
-        <div className="cursor-pointer py-[10px] px-[15px] bg-green-500 text-white rounded-[10px] hover:bg-transparent border border-green-500 hover:text-green-900">
-          <Link href="/estimate">견적문의</Link>
+        <div className="cursor-pointer   text-white  hover:bg-transparent border">
+          <Link
+            href="/estimate"
+            className="w-full p-[35px] bg-green-500 rounded-lg"
+          >
+            견적문의
+          </Link>
         </div>
       </nav>
     </>
