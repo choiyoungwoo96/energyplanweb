@@ -1,5 +1,14 @@
 "use client";
 function Notice() {
+  async function getServerConnection() {
+    const res = await fetch("http://127.0.0.1:3001/data");
+    const data = await res.json();
+    return data;
+  }
+  async function handleClick() {
+    const data = await getServerConnection();
+    console.log(data);
+  }
   const noticeItem = [
     {
       category: "공지",
@@ -42,7 +51,7 @@ function Notice() {
         </div>
         <div className="grid grid-cols-4 gap-4">
           {noticeItem.map((noticeitem, index) => (
-            <div key={noticeitem.index}>
+            <div key={noticeitem.title} onClick={handleClick}>
               <div
                 key={noticeitem.index}
                 className="flex flex-col gap-5 p-8 border border-x-gray-400 cursor-pointer transition-transform duration-200 hover:scale-105 hover:bg-gray-100"
