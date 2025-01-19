@@ -59,10 +59,16 @@ function Menubar() {
                   : "group relative text-black transition-colors duration-700"
               }
             >
-              <Link className="text-lg font-medium " href={menulist.path}>
+              <Link className="text-lg font-medium" href={menulist.path}>
                 {menulist.name}
               </Link>
-              <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-white transition-all duration-300 group-hover:w-[100%] group-hover:left-0"></span>
+              <span
+                className={
+                  isScroll
+                    ? "absolute -bottom-1 left-1/2 w-0 h-1 bg-white transition-all duration-300 group-hover:w-[100%] group-hover:left-0"
+                    : "absolute -bottom-1 left-1/2 w-0 h-1 bg-green-900 transition-all duration-300 group-hover:w-[100%] group-hover:left-0"
+                }
+              ></span>
             </li>
           ))}
         </ul>

@@ -7,6 +7,7 @@ import Profit from "../../components/Section/Profit/profit";
 
 import Partner from "../../components/Section/Partner/partner";
 import Inquire from "../../components/Section/Insquire/inquire";
+import Notice from "../../components/Section/Notice/notice";
 import Footer from "../../components/Footer/footer";
 
 function Page() {
@@ -19,6 +20,7 @@ function Page() {
       <Business></Business>
       <Construction></Construction>
       <Partner></Partner>
+      <Notice></Notice>
       <Inquire></Inquire>
       <Footer></Footer>
     </div>
