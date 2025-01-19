@@ -62,7 +62,7 @@ function Business() {
                 </div>
                 <button
                   key={index++}
-                  className="bg-green-500 p-4 text-white rounded-[10px] absolute bottom-[30px] right-[30px] z-10"
+                  className="bg-green-900 p-4 text-white rounded-[10px] absolute bottom-[30px] right-[30px] z-10"
                 >
                   <Link href={businessitem.path}>{businessitem.button}</Link>
                 </button>
