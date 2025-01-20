@@ -77,7 +77,7 @@ function Footer() {
                 <label>문의내용</label>
                 <textarea className="w-full h-[250px] p-3 focus:outline-green-500 shadow-2xl rounded-lg"></textarea>
               </div>
-              <button className="p-6 col-span-4 bg-green-500 text-white text-2xl rounded-lg cursor-pointer hover:bg-green-300 ">
+              <button className="p-6 col-span-4 bg-green-900 text-white text-2xl rounded-lg cursor-pointer hover:bg-green-500 ">
                 문의하기
               </button>
             </div>

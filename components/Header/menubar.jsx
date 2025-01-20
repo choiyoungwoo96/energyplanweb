@@ -9,7 +9,7 @@ function Menubar() {
     { name: "고객센터", path: "/" },
   ];
   return (
-    <div className="fixed top-0 w-full h-full z-30">
+    <div className="fixed top-0 w-full z-30">
       <nav className="w-[1200px] h-[70px] m-auto flex flex-row items-center justify-between">
         <div>
           <Link href="/" className="flex items-center justify-center">
