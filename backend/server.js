@@ -8,10 +8,10 @@ const app = next({ dev: true });
 const port = 3000;
 
 const pool = mariadb.createPool({
-  host: "localhost",
-  user: "host",
-  password: "wlgh1127",
-  database: "energyplanweb",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_USER,
+  database: process.env.DB_USER,
   connectionLimit: 5,
 });
 
