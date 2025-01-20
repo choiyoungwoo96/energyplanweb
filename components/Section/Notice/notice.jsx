@@ -54,7 +54,7 @@ function Notice() {
             <div key={noticeitem.title} onClick={handleClick}>
               <div
                 key={noticeitem.index}
-                className="flex flex-col gap-5 p-8 border border-x-gray-400 cursor-pointer transition-transform duration-200 hover:scale-105 hover:bg-gray-100"
+                className="flex flex-col gap-5 p-8 rounded-lg border border-x-gray-400 cursor-pointer transition-transform duration-200 hover:scale-105 hover:bg-gray-100"
               >
                 <div className="text-sm text-green-900 font-semibold">
                   {noticeitem.category}

@@ -75,8 +75,8 @@ function Menubar() {
         <div
           className={
             isScroll
-              ? "cursor-pointer py-[10px] px-[15px] bg-green-900 text-white rounded-[10px] hover:bg-white border border-green-900 hover:text-green-900"
-              : "cursor-pointer py-[10px] px-[15px] bg-green-900 text-white rounded-[10px] hover:bg-transparent border border-green-900 hover:text-green-900"
+              ? "cursor-pointer py-[10px] px-[15px] bg-[#dc404a] text-white rounded-[10px] hover:bg-white hover:text-green-900"
+              : "cursor-pointer py-[10px] px-[15px] bg-[#dc404a] text-white rounded-[10px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
           }
         >
           <Link href="/estimate">견적문의</Link>

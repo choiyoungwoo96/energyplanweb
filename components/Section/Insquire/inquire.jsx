@@ -93,7 +93,7 @@ function Inquire() {
               </div>
               <button
                 type="submit"
-                className="p-6 col-span-4 bg-green-900 text-white text-2xl rounded-lg cursor-pointer hover:bg-green-300 "
+                className="p-6 col-span-4 bg-[#dc404a] text-white text-2xl rounded-lg cursor-pointer hover:bg-green-300 "
               >
                 문의하기
               </button>
