@@ -22,7 +22,7 @@ function MainVideo() {
             솔루션으로 경제성과 지속 가능성을 모두 실현하세요. <br />
             에너지플랜이 함께합니다.
           </div>
-          <button className="w-[100px] h-[50px] bg-green-900 text-white rounded-lg hover:bg-white border-green-500 hover:text-green-900">
+          <button className="w-[100px] h-[50px] bg-green-900 text-white rounded-lg hover:bg-white hover:text-green-900">
             <Link href="/">견적문의</Link>
           </button>
         </div>

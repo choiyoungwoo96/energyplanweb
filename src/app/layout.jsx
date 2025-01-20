@@ -15,6 +15,9 @@ import "swiper/css";
 export const metadata = {
   title: "Energyplan",
   description: "Energyplan",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
