@@ -1,4 +1,20 @@
+"use client";
+import { useState } from "react";
+
 function Inquire() {
+  const [inquireValue, setInquireValue] = useState({
+    inquiry_type: "",
+    author_type: "",
+    author_name: "",
+    size_or_name: "",
+    contact_number: "",
+    email: "",
+    address: "",
+    inquiry_content: "",
+  });
+  const handleValue = (e) => {
+    e.preventDefault();
+  };
   return (
     <div
       className="w-screen h-screen bg-cover bg-center relative"
@@ -28,14 +44,21 @@ function Inquire() {
               <br />
             </div>
           </div>
-          <form className="w-full px-4 py-10 rounded-lg bg-white bg-opacity-50 relative">
+          <form
+            action="/backend/server.js"
+            className="w-full px-4 py-10 rounded-lg bg-white bg-opacity-50 relative"
+          >
             <div className="grid grid-cols-4 relative gap-5  text-nowrap text-center ">
               <div className="col-span-4 w-full p-2 text-4xl text-white shadow-md flex items-center justify-center font-extrabold">
                 태양광 문의하기
               </div>
               <div className="flex items-center gap-4 col-span-2">
                 <label className="min-w-[60px]">문의유형</label>
-                <select className="w-full bg-white rounded-md p-3 focus:outline-green-500 shadow-2xl outline-none">
+                <select
+                  name="inquiry_type"
+                  onChange={handleValue}
+                  className="w-full bg-white rounded-md p-3 focus:outline-green-500 shadow-2xl outline-none"
+                >
                   <option>태양광 설치</option>
                   <option>유지보수</option>
                 </select>
@@ -43,25 +66,41 @@ function Inquire() {
               <div className="flex items-center gap-4 col-span-2">
                 <label className="min-w-[60px]">회사명/개인</label>
                 <input
+                  name="author_type"
+                  onChange={handleValue}
                   placeholder="개인일 경우에는 개인으로 작성"
                   required
                   className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
                 ></input>
               </div>
               <div className="flex items-center gap-4 col-span-2">
-                <label className="min-w-[60px]">성명</label>
+                <label
+                  name="author_name"
+                  onChange={handleValue}
+                  className="min-w-[60px]"
+                >
+                  성명
+                </label>
                 <input
+                  name="author_name"
+                  onChange={handleValue}
                   required
                   className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
                 ></input>
               </div>
               <div className="flex items-center gap-4 col-span-2">
                 <label className="min-w-[60px]">용량/평수</label>
-                <input className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"></input>
+                <input
+                  name="size_or_name"
+                  onChange={handleValue}
+                  className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
+                ></input>
               </div>
               <div className="flex items-center gap-4 col-span-2">
                 <label className="min-w-[60px]">연락처</label>
                 <input
+                  name="contact_number"
+                  onChange={handleValue}
                   type="tel"
                   placeholder="ex)010-xxxx-xxxx"
                   required
@@ -71,6 +110,8 @@ function Inquire() {
               <div className="flex items-center gap-4 col-span-2">
                 <label className="min-w-[60px]">이메일</label>
                 <input
+                  name="email"
+                  onChange={handleValue}
                   type="email"
                   placeholder="ex)hongildong@naver.com"
                   className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
@@ -79,6 +120,8 @@ function Inquire() {
               <div className="flex items-center gap-4 justify-center col-span-4">
                 <label className="min-w-[60px]"> 주소</label>
                 <input
+                  name="address"
+                  onChange={handleValue}
                   type="adress"
                   className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
                 ></input>
@@ -86,6 +129,8 @@ function Inquire() {
               <div className="flex items-start justify-center gap-4 col-span-4">
                 <label>문의내용</label>
                 <textarea
+                  name="inquire_content"
+                  onChange={handleValue}
                   placeholder="문의할 내용을 작성해주세요"
                   required
                   className="w-full h-[250px] p-3 focus:outline-green-500 shadow-2xl rounded-lg"
