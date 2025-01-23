@@ -14,6 +14,12 @@ function Inquire() {
   });
   const handleValue = (e) => {
     e.preventDefault();
+    const { name, value } = e.target;
+    setInquireValue((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    console.log(inquireValue);
   };
   return (
     <div
@@ -137,6 +143,7 @@ function Inquire() {
                 ></textarea>
               </div>
               <button
+                onSubmit={onsubmit}
                 type="submit"
                 className="p-6 col-span-4 bg-[#dc404a] text-white text-2xl rounded-lg cursor-pointer hover:bg-green-300 "
               >
