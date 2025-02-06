@@ -1,12 +1,6 @@
 "use client";
 function Notice() {
-  async function getServerConnection() {
-    const res = await fetch("http://127.0.0.1:3001/data");
-    const data = await res.json();
-    return data;
-  }
   async function handleClick() {
-    const data = await getServerConnection();
     console.log(data);
   }
   const noticeItem = [

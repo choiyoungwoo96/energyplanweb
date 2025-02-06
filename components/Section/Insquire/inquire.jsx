@@ -19,7 +19,22 @@ function Inquire() {
       ...prev,
       [name]: value,
     }));
-    console.log(inquireValue);
+  };
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/board", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(inquireValue),
+      });
+      const result = await response.json();
+      console.log("서버 응답", result);
+    } catch (error) {
+      console.error("error :", error);
+    }
   };
   return (
     <div
@@ -51,7 +66,8 @@ function Inquire() {
             </div>
           </div>
           <form
-            action="/backend/server.js"
+            onSubmit={onSubmit}
+            action="/api/board"
             className="w-full px-4 py-10 rounded-lg bg-white bg-opacity-50 relative"
           >
             <div className="grid grid-cols-4 relative gap-5  text-nowrap text-center ">
@@ -65,8 +81,9 @@ function Inquire() {
                   onChange={handleValue}
                   className="w-full bg-white rounded-md p-3 focus:outline-green-500 shadow-2xl outline-none"
                 >
-                  <option>태양광 설치</option>
-                  <option>유지보수</option>
+                  <option value={"선택하세요"}>선택하세요</option>
+                  <option value={"태양광설치"}>태양광 설치</option>
+                  <option value={"유지보수"}>유지보수</option>
                 </select>
               </div>
               <div className="flex items-center gap-4 col-span-2">
@@ -135,7 +152,7 @@ function Inquire() {
               <div className="flex items-start justify-center gap-4 col-span-4">
                 <label>문의내용</label>
                 <textarea
-                  name="inquire_content"
+                  name="inquiry_content"
                   onChange={handleValue}
                   placeholder="문의할 내용을 작성해주세요"
                   required
@@ -143,7 +160,6 @@ function Inquire() {
                 ></textarea>
               </div>
               <button
-                onSubmit={onsubmit}
                 type="submit"
                 className="p-6 col-span-4 bg-[#dc404a] text-white text-2xl rounded-lg cursor-pointer hover:bg-green-300 "
               >
