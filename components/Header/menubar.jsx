@@ -72,14 +72,25 @@ function Menubar() {
             </li>
           ))}
         </ul>
-        <div
-          className={
-            isScroll
-              ? "cursor-pointer py-[10px] px-[15px] bg-[#dc404a] text-white rounded-[10px] hover:bg-white hover:text-green-900"
-              : "cursor-pointer py-[10px] px-[15px] bg-[#dc404a] text-white rounded-[10px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
-          }
-        >
-          <Link href="/estimate">견적문의</Link>
+        <div className="flex items-center justify-center gap-2">
+          <button
+            className={
+              isScroll
+                ? "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-white hover:text-green-900"
+                : "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
+            }
+          >
+            <Link href="/login">로그인</Link>
+          </button>
+          <button
+            className={
+              isScroll
+                ? "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-white hover:text-green-900"
+                : "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
+            }
+          >
+            <Link href="/signup">회원가입</Link>
+          </button>
         </div>
       </nav>
     </div>
