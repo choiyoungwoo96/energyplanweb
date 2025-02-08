@@ -24,7 +24,7 @@ export default function SignUp() {
           </div>
           <div className="w-full flex items-center justify-start bg-white p-4 rounded-3xl outline outline-green-500  relative">
             <label className="min-w-[125px]">아이디</label>
-            <input className="py-2" type="text" placeholder="ID" />
+            <input className="py-2 outline-none" type="text" placeholder="ID" />
             <button className="bg-green-900 px-4 py-2 rounded-2xl text-white absolute top-4 right-5">
               중복검사
             </button>
@@ -32,7 +32,7 @@ export default function SignUp() {
           <div className="w-full flex items-center justify-start bg-white p-4 rounded-3xl outline outline-green-500 ">
             <label className="min-w-[125px]">비밀번호</label>
             <input
-              className="py-2"
+              className="py-2 outline-none"
               type="text"
               placeholder="PASSWORD"
               required
@@ -41,7 +41,7 @@ export default function SignUp() {
           <div className="w-full flex items-center justify-start bg-white p-4 rounded-3xl outline outline-green-500 ">
             <label className="min-w-[125px]">비밀번호 확인</label>
             <input
-              className="py-2"
+              className="py-2 outline-none"
               type="text"
               placeholder="PASSWORD"
               required
@@ -50,7 +50,7 @@ export default function SignUp() {
           <div className="w-full flex items-center justify-start bg-white p-4 rounded-3xl outline outline-green-500 ">
             <label className="min-w-[125px]">이메일</label>
             <input
-              className="py-2"
+              className="py-2 outline-none"
               type="email"
               placeholder="xxxx@xxxx.com"
               required
@@ -59,7 +59,7 @@ export default function SignUp() {
           <div className="w-full flex items-center justify-start bg-white p-4 rounded-3xl outline outline-green-500 ">
             <label className="min-w-[125px]">전화번호</label>
             <input
-              className="py-2"
+              className="py-2 outline-none"
               type="tel"
               placeholder="010-xxxx-xxxx"
               required
