@@ -1,7 +1,55 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const router = useRouter();
+  const [loginValue, setLoginValue] = useState({
+    id: "",
+    password: "",
+  });
+  const [login, setLogin] = useState(false);
+  useEffect(() => {
+    const checkLoginStatus = () => {
+      const token = localStorage.getItem("accessToken");
+      setLogin(!!token);
+      console.log("로그인 상태", !!token);
+    };
+    checkLoginStatus();
+
+    window.addEventListener("storage", checkLoginStatus);
+    return () => {
+      window.removeEventListener("storage", checkLoginStatus);
+    };
+  }, [login]);
+
+  const onChange = (e) => {
+    setLoginValue((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("/api/auth", loginValue);
+      if (res.status === 200) {
+        router.push("/");
+        localStorage.setItem("accessToken", res.data.accessToken);
+      }
+    } catch (error) {
+      if (error.reponse?.status === 403) {
+        console.log("아이디나 비밀번호를 잘못 입력하셨습니다.");
+      } else {
+        console.log("로그인 요청 오휴", error);
+      }
+    }
+  };
+
   return (
     <div
       className="w-screen h-screen bg-cover"
@@ -30,14 +78,21 @@ export default function Login() {
             required
             placeholder="ID"
             className="w-full p-5 rounded-full outline outline-green-500"
+            name="id"
+            onChange={onChange}
           />
           <input
             type="password"
             required
             placeholder="PASSWORD"
             className="w-full p-5 rounded-full outline outline-green-500"
+            name="password"
+            onChange={onChange}
           />
-          <button className="w-full p-5 bg-green-900 rounded-3xl text-white hover:bg-green-400 hover:text-gray-600">
+          <button
+            onClick={onSubmit}
+            className="w-full p-5 bg-green-900 rounded-3xl text-white hover:bg-green-400 hover:text-gray-600"
+          >
             Login
           </button>
           <button className="text-white hover:text-green-700">

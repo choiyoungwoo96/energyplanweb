@@ -3,7 +3,7 @@ import { executeQuery } from "../../../../lib/db.conn";
 export async function GET() {
   try {
     const inquires = await executeQuery("select * from inquiries", []);
-    return new Response(JSON.stringify(inquires), {
+    return new Response(JSON.stringify({ inquires }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
@@ -65,6 +65,4 @@ export async function POST(req) {
   }
 }
 
-export async function PUT(){
-  
-}
+export async function PUT() {}

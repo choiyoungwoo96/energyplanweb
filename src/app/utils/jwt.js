@@ -1,13 +1,9 @@
 import jwt from "jsonwebtoken";
 
 export function generateAccessToken(user) {
-  return jwt.sign(
-    { id: user.id, email: user.email },
-    process.env.ACCESS_TOKEN_SECRETKEY,
-    {
-      expiresIn: process.env.ACCESS_EXPIRE,
-    }
-  );
+  return jwt.sign({ id: user.id }, process.env.ACCESS_TOKEN_SECRETKEY, {
+    expiresIn: process.env.ACCESS_EXPIRE,
+  });
 }
 
 export function generateRefreshToken(user) {

@@ -11,6 +11,19 @@ import Notice from "../../components/Section/Notice/notice";
 import Footer from "../../components/Footer/footer";
 
 function Page() {
+  useEffect(() => {
+    const checkLoginStatus = () => {
+      const token = localStorage.getItem("accessToken");
+      setLogin(!!token);
+      console.log("로그인 상태", !!token);
+    };
+    checkLoginStatus();
+
+    window.addEventListener("storage", checkLoginStatus);
+    return () => {
+      window.removeEventListener("storage", checkLoginStatus);
+    };
+  }, [login]);
   return (
     <div>
       <Menubar></Menubar>
