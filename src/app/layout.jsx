@@ -1,4 +1,4 @@
-import RootLayoutClient from "./\bRootLayoutClient";
+import RootLayoutClient from "./RootLayoutClient";
 import "./globals.css";
 import "swiper/css";
 
