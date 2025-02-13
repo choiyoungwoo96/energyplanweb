@@ -5,7 +5,7 @@ import {
   generateAccessToken,
   //refreshToken 발급
   generateRefreshToken,
-} from "../../utils/jwt";
+} from "../../../utils/jwt";
 
 //dummy value 추후에 DATABASE와 연동할 예쩡
 const users = [

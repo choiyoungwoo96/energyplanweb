@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import useAuthStore from "../../../store/authStore";
 
 export default function Login() {
   const router = useRouter();
@@ -11,21 +12,7 @@ export default function Login() {
     id: "",
     password: "",
   });
-  const [login, setLogin] = useState(false);
-  useEffect(() => {
-    const checkLoginStatus = () => {
-      const token = localStorage.getItem("accessToken");
-      setLogin(!!token);
-      console.log("로그인 상태", !!token);
-    };
-    checkLoginStatus();
-
-    window.addEventListener("storage", checkLoginStatus);
-    return () => {
-      window.removeEventListener("storage", checkLoginStatus);
-    };
-  }, [login]);
-
+  const { login } = useAuthStore();
   const onChange = (e) => {
     setLoginValue((prev) => ({
       ...prev,
@@ -36,16 +23,16 @@ export default function Login() {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth", loginValue);
+      const res = await axios.post("/api/auth/login", loginValue);
       if (res.status === 200) {
         router.push("/");
-        localStorage.setItem("accessToken", res.data.accessToken);
+        login(res.data.accessToken);
       }
     } catch (error) {
-      if (error.reponse?.status === 403) {
+      if (error.response?.status === 403) {
         console.log("아이디나 비밀번호를 잘못 입력하셨습니다.");
       } else {
-        console.log("로그인 요청 오휴", error);
+        console.log("로그인 요청", error);
       }
     }
   };

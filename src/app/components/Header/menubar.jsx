@@ -1,7 +1,7 @@
 "use client";
-import { isCancel } from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import useAuthStore from "../../../../store/authStore";
 
 function Menubar() {
   const menubarList = [
@@ -13,6 +13,8 @@ function Menubar() {
   ];
   const [isScroll, setIsscroll] = useState(true);
   const [updatecroll, setUpdateScroll] = useState(0);
+  const { isLogin } = useAuthStore();
+  const { logout } = useAuthStore();
   useEffect(() => {
     const scrolllHandler = () => {
       if (window.scrollY === 0) {
@@ -72,26 +74,52 @@ function Menubar() {
             </li>
           ))}
         </ul>
-        <div className="flex items-center justify-center gap-2">
-          <button
-            className={
-              isScroll
-                ? "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-white hover:text-green-900"
-                : "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
-            }
-          >
-            <Link href="/login">로그인</Link>
-          </button>
-          <button
-            className={
-              isScroll
-                ? "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-white hover:text-green-900"
-                : "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
-            }
-          >
-            <Link href="/signup">회원가입</Link>
-          </button>
-        </div>
+        {isLogin ? (
+          <div className="flex items-center justify-center gap-2">
+            <button
+              onClick={() => {
+                logout();
+              }}
+              className={
+                isScroll
+                  ? "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-white hover:text-green-900"
+                  : "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
+              }
+            >
+              로그아웃
+            </button>
+            <button
+              className={
+                isScroll
+                  ? "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-white hover:text-green-900"
+                  : "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
+              }
+            >
+              <Link href="/signup">내정보</Link>
+            </button>
+          </div>
+        ) : (
+          <div className="flex items-center justify-center gap-2">
+            <button
+              className={
+                isScroll
+                  ? "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-white hover:text-green-900"
+                  : "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
+              }
+            >
+              <Link href="/login">로그인</Link>
+            </button>
+            <button
+              className={
+                isScroll
+                  ? "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-white hover:text-green-900"
+                  : "cursor-pointer px-4 py-1 bg-[#dc404a] text-white rounded-[5px] hover:bg-transparent hover:border border-green-900 hover:text-green-900"
+              }
+            >
+              <Link href="/signup">회원가입</Link>
+            </button>
+          </div>
+        )}
       </nav>
     </div>
   );
