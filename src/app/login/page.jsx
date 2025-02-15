@@ -8,11 +8,13 @@ import useAuthStore from "../../../store/authStore";
 
 export default function Login() {
   const router = useRouter();
+  const { login } = useAuthStore();
+
   const [loginValue, setLoginValue] = useState({
     id: "",
     password: "",
   });
-  const { login } = useAuthStore();
+
   const onChange = (e) => {
     setLoginValue((prev) => ({
       ...prev,
@@ -22,18 +24,10 @@ export default function Login() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("/api/auth/login", loginValue);
-      if (res.status === 200) {
-        router.push("/");
-        login(res.data.accessToken);
-      }
-    } catch (error) {
-      if (error.response?.status === 403) {
-        console.log("아이디나 비밀번호를 잘못 입력하셨습니다.");
-      } else {
-        console.log("로그인 요청", error);
-      }
+    await login(loginValue);
+    const token = localStorage.getItem("accessToken");
+    if (token) {
+      router.push("/");
     }
   };
 

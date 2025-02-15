@@ -43,12 +43,11 @@ function Business() {
         <ul className="grid grid-cols-2 gap-4">
           {businessItem.map((businessitem, index) => (
             <li key={index}>
-              <div
-                className="p-8 h-[500px] rounded-[5%] relative bg-cover"
-                style={{
-                  backgroundImage: `url(${businessitem.bg})`,
-                }}
-              >
+              <div className="p-8 h-[500px] rounded-[5%] relative bg-cover group overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-200 ease-linear scale-100 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${businessitem.bg})` }}
+                ></div>
                 <div className="absolute z-10">
                   <div
                     key={index++}

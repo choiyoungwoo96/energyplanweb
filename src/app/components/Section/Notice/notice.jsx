@@ -1,4 +1,7 @@
 "use client";
+
+import Link from "next/link";
+
 function Notice() {
   async function handleClick() {
     console.log(data);
@@ -40,7 +43,7 @@ function Notice() {
             (주)에너지플랜 최근소식 및 공지사항을 전달드립니다
           </div>
           <button className="border border-gray-400 rounded-lg py-1 px-4">
-            More
+            <Link href="/notice">More</Link>
           </button>
         </div>
         <div className="grid grid-cols-4 gap-4">
