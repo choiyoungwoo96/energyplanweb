@@ -3,15 +3,15 @@ import Link from "next/link";
 function Footer() {
   return (
     <>
-      <div className="w-screen h-[250px] bg-[#323232] ">
-        <div className="w-[1200px] h-full m-auto">
-          <div className="w-full h-full grid grid-cols-[200px_650px_350px] gap-10">
-            <div className="W-full h-full flex items-center justify-center">
+      <div className="w-screen h-full bg-[#323232] ">
+        <div className="w-full max-w-[1200px] h-full m-auto flex items-center justify-center">
+          <div className="w-full h-full grid grid-cols-4 py-10">
+            <div className="w-full h-full flex items-center justify-center">
               <img className="w-[100px] h-[100px]" src="/logo.png"></img>
             </div>
-            <div className="w-full h-full flex flex-col items-start justify-center gap-2">
+            <div className="w-full h-full flex flex-col items-start justify-center gap-2 col-span-2">
               <p className="text-white text-2xl ">에너지플랜</p>
-              <div className="flex items-center justify-start gap-4 text-gray-400">
+              <div className="flex items-center justify-start text-gray-400 ">
                 <p>대표 : 강성묵</p>
                 <p>E-mail : alsrkd@naver.com</p>
                 <p>사업자등록번호 : 422-87-03644</p>

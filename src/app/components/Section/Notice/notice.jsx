@@ -34,7 +34,7 @@ function Notice() {
   ];
   return (
     <div className="w-screen p-[50px]">
-      <div className="w-[1200px] m-auto flex flex-col gap-8">
+      <div className="w-full max-w-[1200px] m-auto flex flex-col gap-8">
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="text-3xl text-[#393939] font-semibold">
             News & Notice
@@ -46,7 +46,7 @@ function Notice() {
             <Link href="/notice">More</Link>
           </button>
         </div>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-2 gap-4">
           {noticeItem.map((noticeitem, index) => (
             <div key={noticeitem.title} onClick={handleClick}>
               <div

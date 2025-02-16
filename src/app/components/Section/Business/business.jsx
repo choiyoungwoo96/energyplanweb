@@ -32,7 +32,7 @@ function Business() {
     },
   ];
   return (
-    <div className="w-[1200px] m-auto py-[50px]">
+    <div className="w-full max-w-[1200px] m-auto py-[50px]">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col">
           <p className="text-4xl font-bold">태양광 사업의 종류</p>
@@ -40,7 +40,7 @@ function Business() {
             Introduction to solar energy business
           </p>
         </div>
-        <ul className="grid grid-cols-2 gap-4">
+        <ul className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
           {businessItem.map((businessitem, index) => (
             <li key={index}>
               <div className="p-8 h-[500px] rounded-[5%] relative bg-cover group overflow-hidden">

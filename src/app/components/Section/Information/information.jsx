@@ -2,7 +2,7 @@ function Information() {
   return (
     <div className="w-full max-w-[1200px] m-auto">
       <div className="flex flex-col gap-4 py-[50px]">
-        <div className="flex items-center justify-start gap-5">
+        <div className="grid md:grid-cols-2 sm:grid-cols-1 justify-start gap-5">
           <div>
             <div className="text-4xl">SMP/REC 정보</div>
             <div className="text-xl text-gray-500">SMP/REC infomation</div>
@@ -21,7 +21,7 @@ function Information() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-20">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-20">
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-start gap-3 ">
               <div className="px-10 py-2 text-2xl  bg-green-900 text-white rounded-lg flex items-center justify-center">

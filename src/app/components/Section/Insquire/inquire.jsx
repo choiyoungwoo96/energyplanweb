@@ -37,27 +37,34 @@ function Inquire() {
     }
   };
   return (
+    // 상담 section backgroundImage
     <div
-      className="w-screen h-screen bg-cover bg-center relative"
+      className="w-screen h-full bg-cover bg-center relative"
       style={{ backgroundImage: "url('/inquire.jpg')" }}
     >
+      {/* 뒷배경 검정 투명화 처리 */}
       <div className="absolute top-0 left-0  bg-black opacity-50 w-full h-full"></div>
-      <div className="w-[1440px] h-full m-auto">
-        <div className="h-full flex items-center justify-between gap-8">
-          <div className="relative flex flex-col w-full h-full items-start justify-center text-white gap-8">
+
+      <div className="w-full max-w-[1200px] h-full m-auto">
+        <div className="h-full grid lg:grid-cols-3 md:grid-cols-2 gap-4 py-8 ">
+          <div className="relative w-screen h-full flex flex-col items-start justify-center text-white gap-8 col-span-1 lg:col-span-1 md:col-span-2 text-center">
             {/* 제목.소제목, 내용 등록 */}
-            <div className="text-4xl font-bold">태양광 관련 문의 및 상담</div>
-            <div className="text-2xl font-semibold">
+            <div className="w-full text-4xl  font-extrabold">
+              태양광 관련 문의 및 상담
+            </div>
+            <div className="w-full text-2xl font-semibold">
               설치부터 관리까지, 안전하고 효율적인 <br />
               태양광 시스템을 위한 최적의 솔루션!
             </div>
-            <div className="text-lg font-thin">
-              태양광 설치를 고민하고 계신가요? 혹은 이미 설치된 태양광 시스템의
+            <div className="w-full text-lg font-thin">
+              태양광 설치를 고민하고 계신가요? <br />
+              혹은 이미 설치된 태양광 시스템의 <br />
               상태를 점검하고 싶으신가요? <br />
-              저희는 태양광 시스템에 대한 전문적인 상담과 안전한 관리 서비스를
-              제공합니다. <br />
+              저희는 태양광 시스템에 대한 전문적인 상담과 <br />
+              안전한 관리 서비스를 제공합니다. <br />
               <br />• 신규 설치: 효율적이고 경제적인 맞춤형 설계를 통해 최적의
               태양광 시스템을 안내해 드립니다.
+              <br />
               <br />• 정기 점검 및 유지보수: 설치된 태양광 설비의 성능과
               안전성을 꼼꼼히 검토하여, 지속 가능한 에너지 환경을 유지하도록
               돕습니다.
@@ -68,14 +75,14 @@ function Inquire() {
           <form
             onSubmit={onSubmit}
             action="/api/board"
-            className="w-full px-4 py-10 rounded-lg bg-white bg-opacity-50 relative"
+            className="w-full p-6 rounded-lg bg-white bg-opacity-50 relative col-span-2"
           >
             <div className="grid grid-cols-4 relative gap-5  text-nowrap text-center ">
               <div className="col-span-4 w-full p-2 text-4xl text-white shadow-md flex items-center justify-center font-extrabold">
                 태양광 문의하기
               </div>
-              <div className="flex items-center gap-4 col-span-2">
-                <label className="min-w-[60px]">문의유형</label>
+              <div className="flex items-center gap-4 col-span-4 sm:col-span-2">
+                <label className="min-w-[75px]">문의유형</label>
                 <select
                   name="inquiry_type"
                   onChange={handleValue}
@@ -86,8 +93,8 @@ function Inquire() {
                   <option value={"유지보수"}>유지보수</option>
                 </select>
               </div>
-              <div className="flex items-center gap-4 col-span-2">
-                <label className="min-w-[60px]">회사명/개인</label>
+              <div className="flex items-center gap-4 col-span-4 sm:col-span-2">
+                <label className="min-w-[75px]">회사명/개인</label>
                 <input
                   name="author_type"
                   onChange={handleValue}
@@ -96,11 +103,11 @@ function Inquire() {
                   className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
                 ></input>
               </div>
-              <div className="flex items-center gap-4 col-span-2">
+              <div className="flex items-center gap-4 col-span-4 sm:col-span-2">
                 <label
                   name="author_name"
                   onChange={handleValue}
-                  className="min-w-[60px]"
+                  className="min-w-[75px]"
                 >
                   성명
                 </label>
@@ -111,16 +118,16 @@ function Inquire() {
                   className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
                 ></input>
               </div>
-              <div className="flex items-center gap-4 col-span-2">
-                <label className="min-w-[60px]">용량/평수</label>
+              <div className="flex items-center gap-4 col-span-4 sm:col-span-2">
+                <label className="min-w-[75px]">용량/평수</label>
                 <input
                   name="size_or_name"
                   onChange={handleValue}
                   className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
                 ></input>
               </div>
-              <div className="flex items-center gap-4 col-span-2">
-                <label className="min-w-[60px]">연락처</label>
+              <div className="flex items-center gap-4 col-span-4 sm:col-span-2">
+                <label className="min-w-[75px]">연락처</label>
                 <input
                   name="contact_number"
                   onChange={handleValue}
@@ -130,8 +137,8 @@ function Inquire() {
                   className="w-full rounded-md outline-none p-3 focus:outline-green-500 shadow-2xl"
                 ></input>
               </div>
-              <div className="flex items-center gap-4 col-span-2">
-                <label className="min-w-[60px]">이메일</label>
+              <div className="flex items-center gap-4 col-span-4 sm:col-span-2">
+                <label className="min-w-[75px]">이메일</label>
                 <input
                   name="email"
                   onChange={handleValue}
@@ -141,7 +148,7 @@ function Inquire() {
                 ></input>
               </div>
               <div className="flex items-center gap-4 justify-center col-span-4">
-                <label className="min-w-[60px]"> 주소</label>
+                <label className="min-w-[75px]"> 주소</label>
                 <input
                   name="address"
                   onChange={handleValue}
@@ -150,7 +157,7 @@ function Inquire() {
                 ></input>
               </div>
               <div className="flex items-start justify-center gap-4 col-span-4">
-                <label>문의내용</label>
+                <label className="min-w-[75px]">문의내용</label>
                 <textarea
                   name="inquiry_content"
                   onChange={handleValue}
