@@ -34,7 +34,7 @@ function Notice() {
   ];
   return (
     <div className="w-screen p-[50px]">
-      <div className="w-full max-w-[1200px] m-auto flex flex-col gap-8">
+      <div className="w-full max-w-[1200px] m-auto flex flex-col gap-8 px-4">
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="text-3xl text-[#393939] font-semibold">
             News & Notice

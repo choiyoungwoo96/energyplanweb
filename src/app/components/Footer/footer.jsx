@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <div className="w-screen h-full bg-[#323232] ">
-        <div className="w-full max-w-[1200px] h-full m-auto flex items-center justify-center">
+        <div className="w-full max-w-[1200px] h-full m-auto flex items-center justify-center px-4">
           <div className="w-full h-full grid grid-cols-4 py-10">
             <div className="w-full h-full flex items-center justify-center">
               <img className="w-[100px] h-[100px]" src="/logo.png"></img>

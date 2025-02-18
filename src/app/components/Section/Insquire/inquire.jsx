@@ -39,15 +39,15 @@ function Inquire() {
   return (
     // 상담 section backgroundImage
     <div
-      className="w-screen h-full bg-cover bg-center relative"
+      className="w-screen h-full bg-cover bg-center relative px-4"
       style={{ backgroundImage: "url('/inquire.jpg')" }}
     >
       {/* 뒷배경 검정 투명화 처리 */}
       <div className="absolute top-0 left-0  bg-black opacity-50 w-full h-full"></div>
 
-      <div className="w-full max-w-[1200px] h-full m-auto">
-        <div className="h-full grid lg:grid-cols-3 md:grid-cols-2 gap-4 py-8 ">
-          <div className="relative w-screen h-full flex flex-col items-start justify-center text-white gap-8 col-span-1 lg:col-span-1 md:col-span-2 text-center">
+      <div className="w-full max-w-[1200px] h-full m-auto px-4">
+        <div className="h-full grid lg:grid-cols-3 md:grid-cols-2 gap-4 py-8">
+          <div className="relative w-full h-full flex flex-col items-start justify-center m-auto md:col-span-2 lg:grid-cols-1 text-white gap-8 md:text-center lg:text-left">
             {/* 제목.소제목, 내용 등록 */}
             <div className="w-full text-4xl  font-extrabold">
               태양광 관련 문의 및 상담

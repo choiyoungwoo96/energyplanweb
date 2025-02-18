@@ -22,7 +22,7 @@ function Partner() {
   //   ];
   return (
     <div className="w-screen bg-gray-100 py-[100px] flex flex-col gap-10">
-      <div className="w-full max-w-[1200px] m-auto">
+      <div className="w-full max-w-[1200px] m-auto px-4">
         <div className="text-3xl">Partner Company</div>
       </div>
       <div className="flex items-start justify-start  w-screen">

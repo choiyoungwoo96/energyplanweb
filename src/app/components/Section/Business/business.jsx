@@ -32,7 +32,7 @@ function Business() {
     },
   ];
   return (
-    <div className="w-full max-w-[1200px] m-auto py-[50px]">
+    <div className="w-full max-w-[1200px] m-auto py-[50px] px-4">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col">
           <p className="text-4xl font-bold">태양광 사업의 종류</p>

@@ -1,23 +1,25 @@
 function Information() {
   return (
-    <div className="w-full max-w-[1200px] m-auto">
+    <div className="w-full max-w-[1200px] m-auto px-4">
       <div className="flex flex-col gap-4 py-[50px]">
         <div className="grid md:grid-cols-2 sm:grid-cols-1 justify-start gap-5">
-          <div>
-            <div className="text-4xl">SMP/REC 정보</div>
-            <div className="text-xl text-gray-500">SMP/REC infomation</div>
-          </div>
-          <div className="flex gap-2">
-            <select className="border border-green-950 px-4">
-              <option>가중치0.7</option>
-              <option>가중치1.0</option>
-              <option>가중치1.2</option>
-              <option>가중치1.5</option>
-            </select>
-            <div className="flex">
-              <span className="border border-green-950 px-4 py-1">통합</span>
-              <span className="border border-green-950 px-4 py-1">육지</span>
-              <span className="border border-green-950 px-4 py-1">제주</span>
+          <div className="flex items-end justify-start gap-4">
+            <div className="flex flex-col">
+              <div className="text-4xl">SMP/REC 정보</div>
+              <div className="text-xl text-gray-500">SMP/REC infomation</div>
+            </div>
+            <div className="flex gap-2">
+              <select className="border border-green-950 px-4">
+                <option>가중치0.7</option>
+                <option>가중치1.0</option>
+                <option>가중치1.2</option>
+                <option>가중치1.5</option>
+              </select>
+              <div className="flex">
+                <span className="border border-green-950 px-4 py-1">통합</span>
+                <span className="border border-green-950 px-4 py-1">육지</span>
+                <span className="border border-green-950 px-4 py-1">제주</span>
+              </div>
             </div>
           </div>
         </div>

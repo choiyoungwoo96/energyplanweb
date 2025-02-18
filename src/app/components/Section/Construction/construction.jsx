@@ -3,7 +3,7 @@ import ConstructionSwiper from "./constructionSwiper";
 function Construction() {
   return (
     <>
-      <div className="w-full max-w-[1200px] m-auto flex flex-col gap-4 py-[50px]">
+      <div className="w-full max-w-[1200px] m-auto flex flex-col gap-4 py-[50px] px-4">
         <div className="flex items-end justify-between">
           <div>
             <div className="text-4xl font-bold">시공사례</div>
